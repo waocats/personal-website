@@ -1,0 +1,23 @@
+<html>
+    <head>
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+            <title>Waocats' Personal Webpage</title>
+        {% endif %}
+        <meta charset="UTF-8">
+        <meta name="author" content="Brendan Thompson">
+        <meta name="description" content="A personal website for Brendan Thompson, detailing education, projects, and coding experience.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="{{ url_for('about') }}">About Me</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <hr>
+        {% block content %} {% endblock %}
+    </body>
+</html>

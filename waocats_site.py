@@ -1,0 +1,1 @@
+from waocats_site import app
