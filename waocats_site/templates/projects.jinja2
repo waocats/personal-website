@@ -1,5 +1,15 @@
 {% extends "base.jinja2" %}
 
 {% block content %}
-<p>Still working on this page... Check back soon!</p>
+<h1>Projects</h1>
+
+<h2>mpris-rpc</h2>
+<p>mpris-rpc is a project I started in early 2020 as a way to integrate the MPRIS2 D-Bus specification with
+Discord's Rich Presence feature. In short, it can grab data from any MPRIS2-compliant media player on Linux
+(which so happens to be a decent number of them) and display it on the user's profile. This can be anything
+from the current song's metadata to how far through the song they are.</p>
+<p>With the exception of some minor details, mpris-rpc was finished in the summer of 2020 using Python, but it
+was lost following an improper backup while migrating my data. As a result, it's no longer completed, but I
+am planning to rewrite it when this website is finished.</p>
+
 {% endblock %}
