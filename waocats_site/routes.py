@@ -8,12 +8,12 @@ def index():
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.jinja2')
+    return render_template('projects.jinja2', title='Projects')
 
 @app.route('/about')
 def about():
-    return render_template('about.jinja2')
+    return render_template('about.jinja2', title='About Me')
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.jinja2')
+    return render_template('contact.jinja2', title='Contact Me')

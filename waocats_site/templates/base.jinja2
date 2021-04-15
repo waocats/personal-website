@@ -1,9 +1,10 @@
 <html>
     <head>
+        <link rel="stylesheet" href="../static/main.css">
         {% if title %}
             <title>{{ title }}</title>
         {% else %}
-            <title>Waocats' Personal Webpage</title>
+            <title>Brendan's Personal Webpage</title>
         {% endif %}
         <meta charset="UTF-8">
         <meta name="author" content="Brendan Thompson">
@@ -11,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>
+        <div class="navbar">
             <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('projects') }}">Projects</a>
             <a href="{{ url_for('about') }}">About Me</a>
