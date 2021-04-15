@@ -1,0 +1,1 @@
+web: gunicorn waocats_site:app
