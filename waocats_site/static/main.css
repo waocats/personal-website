@@ -21,6 +21,11 @@ td > code {
     border-radius: .2rem;
 }
 
+video {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     background-color: rgb(253, 253, 253);
     margin-bottom: 25px;}
