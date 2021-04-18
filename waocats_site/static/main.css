@@ -3,9 +3,24 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: medium;
 }
 
-p, .navbar, ul {
+.navbar, p, ul {
     font-family: "Noto Sans";
     font-weight: normal;
 }
 
-body {background-color: rgb(253, 253, 253);}
+p > code,
+li > code,
+dd > code,
+td > code {
+    font-size: 14px;
+    background: #f3f3f3;
+    border: 1.2px solid rgb(166, 166, 253);
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: .1rem .1rem .1rem;
+    border-radius: .2rem;
+}
+
+body {
+    background-color: rgb(253, 253, 253);
+    margin-bottom: 25px;}

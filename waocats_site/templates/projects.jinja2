@@ -4,12 +4,40 @@
 <h1>Projects</h1>
 
 <h2>mpris-rpc</h2>
-<p>mpris-rpc is a project I started in early 2020 as a way to integrate the MPRIS2 D-Bus specification with
+<p><code>mpris-rpc</code> is a project I started in early 2020 as a way to integrate the MPRIS2 D-Bus specification with
 Discord's Rich Presence feature. In short, it can grab data from any MPRIS2-compliant media player on Linux
 (which so happens to be a decent number of them) and display it on the user's profile. This can be anything
 from the current song's metadata to how far through the song they are.</p>
-<p>With the exception of some minor details, mpris-rpc was finished in the summer of 2020 using Python, but it
-was lost following an improper backup while migrating my data. As a result, it's no longer completed, but I
-am planning to rewrite it when this website is finished.</p>
+<p>With the exception of some minor details, <code>mpris-rpc</code> was finished in the summer of 2020 using Python, but it
+was lost following an improper backup while migrating my data. As a result, it's no longer completed, but I am planning
+to rewrite it when this website is finished.</p>
+<p>UPDATE (04/18/21): A friend of mine was able to find some of my old (albeit work in progress) code, which I cobbled together 
+and got working again as a proof of concept. I'll need some time to refine it, but for now, here's what it looks like:</p>
+<br>
 
+<video width="934" height="466" autoplay loop>
+    <source src="../static/mpris-rpc-1.webm" type="video/webm">
+    Sorry, your browser does not support the video tag.
+</video>
+
+<p>This is how <code>mpris-rpc</code> looks when it is started through the terminal. There were originally 3 commands, those being
+<code>--list</code>, <code>--run</code>, and <code>--player</code>; however, the lattermost left me with a problem. <code>--player</code>
+was intended to serve as a means to swap the current player during runtime, but there was no way to communicate with the program while it
+was running. What I decided upon was to have a daemon process handling the Rich Presence/D-Bus side of things, while the main program could
+be used to communicate with/spawn that daemon process when needed. This obviously meant a lot of refactoring (which I did partly, then promptly
+lost), where at the time I achieved inter-process communication between the daemon and the main program using a named pipe. In retrospect, however,
+using D-Bus to facilitate that communication instead would have been a lot more sensible. Perhaps I will implement that in the future :)</p><br>
+
+<video width="934" height="414" autoplay loop>
+    <source src="../static/mpris-rpc-2.webm" type="video/webm">
+    Sorry, your browser does not support the video tag.
+</video>
+
+<p>Thanks to <code>pypresence</code>, getting it to work with Discord is fairly simple. Provided a client/application ID (which Discord assigns to
+you in the developer portal), connecting to Discord and setting Rich Presence status constitutes only a few lines of the entire program. Since this
+program was also originally intended to be distributed, all of these things can be set in a config file (along with preferences for default/blacklisted
+players, which metadata to display, etc). This leads to the next problem I had, which was being able to use image metadata (such as the album art, artist
+image, etc) with Discord. Spotify does this, but since Discord requires all assets to be uploaded to their site for regular user-made applications (not 
+to mention there's a limit to how many assets can be uploaded), this left me with a big issue. I realized I might be able to use <code>selenium</code> to
+automate this, but I never got around to implementing it.</p>
 {% endblock %}
