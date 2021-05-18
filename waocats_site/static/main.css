@@ -1,31 +1,51 @@
+.navbar {
+    padding-bottom: 50px;
+}
+
+a {
+    padding-right: 50px;
+    text-decoration: none;
+    color: #3ed6b3;
+}
+
+body {
+    background-color: #0b1b31;
+    margin: 25px;
+    font-family: "Noto Sans";
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Noto Sans";
-    font-weight: medium;
+    font-weight: bolder;
+    color: #a2abb8;
 }
 
-.navbar, p, ul {
-    font-family: "Noto Sans";
-    font-weight: normal;
+h1 {
+    margin-top: auto;
+    font-size: 65px;
+    color: #c0cbda;
+    position: relative;
+    left: -5px;
 }
 
-p > code,
-li > code,
-dd > code,
-td > code {
+small {
+    color: #3ed6b3;
+    font-size: 15px;
+}
+
+p, ul {
+    color: #949ba7;
+}
+
+code {
     font-size: 14px;
-    background: #f3f3f3;
-    border: 1.2px solid rgb(166, 166, 253);
-    word-wrap: break-word;
-    box-decoration-break: clone;
-    padding: .1rem .1rem .1rem;
+    border: 1.2px solid #3ed6b3;
     border-radius: .2rem;
+    padding: .1rem;
+    box-decoration-break: clone;
+    margin-right: .1rem;
 }
 
 video {
     max-width: 100%;
     height: auto;
 }
-
-body {
-    background-color: rgb(253, 253, 253);
-    margin-bottom: 25px;}
