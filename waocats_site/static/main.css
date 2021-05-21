@@ -1,30 +1,57 @@
 .navbar {
+    min-width: min-content;
     padding-bottom: 50px;
 }
 
+.navbar > a {
+    margin-right: 2vw;
+}
+
 a {
-    padding-right: 50px;
-    text-decoration: none;
     color: #3ed6b3;
+    text-decoration: none;
+    
+    position: relative;
+}
+
+a:before {
+    content: "";
+
+    background-color: #3ed6b3;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3;
+    left: 0;
+}
+
+a:hover:before {
+    visibility: visible;
+    width: 100%;
 }
 
 body {
     background-color: #0b1b31;
-    margin: 25px;
     font-family: "Noto Sans";
-}
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bolder;
-    color: #a2abb8;
+    margin: 25px;
 }
 
 h1 {
-    margin-top: auto;
-    font-size: 65px;
     color: #c0cbda;
+    font-size: 65px;
+
+    margin-top: 0px;
     position: relative;
     left: -5px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #a2abb8;
+    font-weight: bolder;
 }
 
 small {
@@ -36,16 +63,35 @@ p, ul {
     color: #949ba7;
 }
 
+ul {
+    position: relative;
+    left: -20px;
+}
+
 code {
     font-size: 14px;
+    
+    box-decoration-break: clone;
     border: 1.2px solid #3ed6b3;
     border-radius: .2rem;
     padding: .1rem;
-    box-decoration-break: clone;
     margin-right: .1rem;
 }
 
 video {
     max-width: 100%;
     height: auto;
+}
+
+@media only screen and (max-width: 395px) {
+    h1 {
+        font-size: 16vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+    a, p, code, ul {
+        font-size: 4vw;
+    }
 }
