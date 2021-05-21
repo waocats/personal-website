@@ -54,11 +54,6 @@ h2, h3, h4, h5, h6 {
     font-weight: bolder;
 }
 
-small {
-    color: #3ed6b3;
-    font-size: 15px;
-}
-
 p, ul {
     color: #949ba7;
 }
@@ -78,6 +73,11 @@ code {
     margin-right: .1rem;
 }
 
+small {
+    color: #3ed6b3;
+    font-size: 15px;
+}
+
 video {
     max-width: 100%;
     height: auto;
@@ -91,7 +91,17 @@ video {
     h2 {
         font-size: 6vw;
     }
-    a, p, code, ul {
+    
+    a, p, ul {
         font-size: 4vw;
     }
+
+    code {
+        font-size: 3.8vw;
+    }
+
+    small {
+        font-size: 3.7vw;
+    }
+
 }
