@@ -12,12 +12,15 @@
         {% endif %}
     </head>
     <body>
-        <div class="navbar">
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('projects') }}">Projects</a>
-            <a href="{{ url_for('about') }}">About Me</a>
-            <a href="{{ url_for('contact') }}">Contact</a>
-        </div>
-        {% block content %} {% endblock %}
+        <div class="particles-js" id="particles-js"></div>
+            <div class="navbar">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('projects') }}">Projects</a>
+                <a href="{{ url_for('about') }}">About Me</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+            </div>
+            {% block content %} {% endblock %}
+        <script src="../static/particles.js"></script>
+        <script src="../static/app.js"></script>
     </body>
 </html>

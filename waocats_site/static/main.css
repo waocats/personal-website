@@ -34,9 +34,8 @@ a:hover:before {
 }
 
 body {
-    background-color: #0b1b31;
     font-family: "Noto Sans";
-
+    background-color: #0b1b31;
     margin: 25px;
 }
 
@@ -55,7 +54,7 @@ h2, h3, h4, h5, h6 {
 }
 
 p, ul {
-    color: #949ba7;
+    color: #a2abb8;
 }
 
 ul {
@@ -81,6 +80,11 @@ small {
 video {
     max-width: 100%;
     height: auto;
+}
+
+#particles-js canvas {
+    position: fixed;
+    z-index: -1;
 }
 
 @media only screen and (max-width: 395px) {
